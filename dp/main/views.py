@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def menu(request):
+    context = {
+        'name1': 'Restorant',
+        'name2': 'Здравец',
+    }
+    return render(request, 'main/menu.html', context)
