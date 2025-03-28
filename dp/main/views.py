@@ -1,9 +1,14 @@
 from django.shortcuts import render
+from .models import *
+
 
 
 def menu(request):
+    groups = Group.objects.all()
+    menu = MenuItem.objects.all()
+
     context = {
-        'name1': 'Restorant',
-        'name2': 'Здравец',
+        'groups': groups,
+        'menu': menu,
     }
     return render(request, 'main/menu.html', context)
