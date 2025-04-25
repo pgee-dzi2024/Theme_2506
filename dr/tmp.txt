@@ -164,3 +164,44 @@ def menu_view(request):
 setInterval(updateMenu, 30000); // обновяване на менюто на всеки 30 секунди
 
 ////
+
+
+
+class Group(models.Model):
+    name = models.CharField('Наименование', max_length=50, default='', blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Раздел в менюто'
+        verbose_name_plural = 'Раздели в менюто'
+
+       ////////////
+
+
+
+       class MenuItem(models.Model):
+    name = models.CharField('Наименование', max_length=100, default='', blank=True)
+    description = models.TextField('Описание', default='', blank=True)
+    price = models.DecimalField('Цена', max_digits=6, decimal_places=2, default=0)
+    photo = models.ImageField('Снимка', upload_to='menu', blank=True)
+    section = models.ForeignKey(Group, verbose_name='Раздел/група', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Позиция в менюто'
+        verbose_name_plural = 'Позиции в менюто'
+
+       ////////////
+
+       group1 = Group.objects.create(name='Предястия')
+group2 = Group.objects.create(name='Десерти')
+
+MenuItem.objects.create(name='Салата Цезар', description='Свежа салата с римска маруля...', price=5.50, section=group1)
+MenuItem.objects.create(name='Шоколадов мус', description='Лек и въздушен десерт...', price=3.20, section=group2)
+
+
+
