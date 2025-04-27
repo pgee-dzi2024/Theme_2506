@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import *
 
 
-
 def menu(request):
     groups = Group.objects.all()
     menu = MenuItem.objects.all()
