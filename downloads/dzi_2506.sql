@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Време на генериране: 28 март 2025 в 10:36
+-- Време на генериране: 25 май 2025 в 22:38
 -- Версия на сървъра: 10.4.32-MariaDB
 -- Версия на PHP: 8.2.12
 
@@ -120,7 +120,7 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$600000$MSzWgxAIJ78UjlRnpygrX7$OcW+Yz+EaNn+1RgvwUJO3NMaJkflPXCTNsZYEGSVp+k=', '2025-03-28 08:27:03.727742', 1, 'dzi_25', '', '', '', 1, 1, '2025-03-28 08:25:08.830180');
+(1, 'pbkdf2_sha256$600000$MSzWgxAIJ78UjlRnpygrX7$OcW+Yz+EaNn+1RgvwUJO3NMaJkflPXCTNsZYEGSVp+k=', '2025-05-21 14:10:41.000069', 1, 'dzi_25', '', '', '', 1, 1, '2025-03-28 08:25:08.830180');
 
 -- --------------------------------------------------------
 
@@ -172,7 +172,10 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 (2, '2025-03-28 08:27:35.214073', '2', 'Супи', 1, '[{\"added\": {}}]', 7, 1),
 (3, '2025-03-28 08:33:40.326440', '1', 'предястие 1', 1, '[{\"added\": {}}]', 8, 1),
 (4, '2025-03-28 08:34:02.630506', '2', 'предястие 2', 1, '[{\"added\": {}}]', 8, 1),
-(5, '2025-03-28 08:34:36.731783', '3', 'супа', 1, '[{\"added\": {}}]', 8, 1);
+(5, '2025-03-28 08:34:36.731783', '3', 'супа', 1, '[{\"added\": {}}]', 8, 1),
+(6, '2025-05-21 14:11:50.071160', '3', 'пилешка супа', 2, '[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]', 8, 1),
+(7, '2025-05-21 14:12:31.717111', '2', 'предястие 2', 2, '[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]', 8, 1),
+(8, '2025-05-21 14:12:56.907891', '1', 'предястие 1', 2, '[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]', 8, 1);
 
 -- --------------------------------------------------------
 
@@ -255,6 +258,7 @@ CREATE TABLE `django_session` (
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('134svp7ery6m4hofg0ww9xrjiu3cwpym', '.eJxVjEEOwiAQRe_C2pACA1KX7nsGwgyDVA0kpV0Z765NutDtf-_9lwhxW0vYOi9hTuIilDj9bhjpwXUH6R7rrUlqdV1mlLsiD9rl1BI_r4f7d1BiL99aO2SbyRB551TKmpEBNLjxbFIiA1ljHtBa5ZRC68yA5DH6EQEZAcT7A_cnOFY:1uHk9Z:UH6-gyOdZggyFmht_RzNXYIT1IP3TYozU9wuHqIpu4o', '2025-06-04 14:10:41.005740'),
 ('mbn2m65t4duq794ilei141a0mojetra3', '.eJxVjEEOwiAQRe_C2pACA1KX7nsGwgyDVA0kpV0Z765NutDtf-_9lwhxW0vYOi9hTuIilDj9bhjpwXUH6R7rrUlqdV1mlLsiD9rl1BI_r4f7d1BiL99aO2SbyRB551TKmpEBNLjxbFIiA1ljHtBa5ZRC68yA5DH6EQEZAcT7A_cnOFY:1ty53P:52-aECHRmboPmNdLhNuUBILZsZIF97yWEMx2Aga685Q', '2025-04-11 08:27:03.738619');
 
 -- --------------------------------------------------------
@@ -296,9 +300,9 @@ CREATE TABLE `main_menuitem` (
 --
 
 INSERT INTO `main_menuitem` (`id`, `name`, `description`, `price`, `photo`, `section_id`) VALUES
-(1, 'предястие 1', 'жсфгс  сдг сдфгсд', 14.12, 'menu/menu-7.jpg', 1),
-(2, 'предястие 2', 'дса адфаф', 9.99, 'menu/menu-8.jpg', 1),
-(3, 'супа', 'дсф асдфс сфгсд', 11.11, 'menu/menu-3.jpg', 2);
+(1, 'предястие 1', 'панирани червени чушки с лека гарнитура', 14.12, 'menu/menu-7.jpg', 1),
+(2, 'предястие 2', 'Постно предястие от подбрани зеленчуци', 9.99, 'menu/menu-8.jpg', 1),
+(3, 'пилешка супа', 'Лека и много вкусна супа по специална рецепта', 11.11, 'menu/menu-3.jpg', 2);
 
 --
 -- Indexes for dumped tables
@@ -434,7 +438,7 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `django_content_type`
